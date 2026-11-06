@@ -251,6 +251,25 @@ footer{
       <p>Staff minutes per case, first-pass packet completeness, authorization turnaround time, avoidable documentation-related denials, and manual intervention rate.</p>
      </div>
     </div>
+  <div class="detail-section">
+    <h3>Agent Evaluation</h3>
+    <p>
+    I designed an evaluation approach for AuthFlow to assess whether
+    the agent can reliably interpret clinical documentation against
+    payer-specific MRI prior authorization requirements. Test
+    scenarios focus on complete, missing, conflicting, and unsupported
+    clinical evidence, as well as ambiguous cases requiring human
+    review. Each case compares the agent's output against expected
+    results, examining evidence-to-criteria mapping, missing-document
+    detection, unsupported claims, source traceability, and appropriate
+    escalation. The goal is to evaluate not just whether the agent
+    produces a plausible authorization summary, but whether its
+    conclusions are grounded in the available documentation and
+    whether it recognizes when human intervention is necessary.
+    This is an educational prototype evaluation using synthetic cases,
+    not a validated clinical or production assessment.
+    </p>
+</div>
     <div class="project-links">
      <a href="https://mri-auth-compass.lovable.app/" target="_blank" rel="noopener">VIEW LIVE PROTOTYPE ↗</a>
     </div>
@@ -316,10 +335,23 @@ footer{
       <h4>Agent workflow</h4>
       <p>Company research → account data retrieval → health analysis → opportunity classification → recommended action → personalized email draft → human approval.</p>
      </div>
-     <div>
-      <h4>Prototype evaluation</h4>
-      <p>On a self-created dataset of eight synthetic accounts, opportunity labels matched all eight intended labels. Health-score ordering had no inversions against the manual ranking. Timing flags matched all eight intended labels.</p>
-     </div>
+     <div class="detail-section">
+  <h3>Agent Evaluation</h3>
+  <p>
+    I evaluated the Account Growth Agent using an internally created
+    dataset of 8 synthetic customer accounts to assess its ability to
+    identify account opportunities and recommend appropriate actions.
+    The evaluation covered opportunity classification, account health
+    ranking, outreach timing, and personalization of generated emails.
+    The agent matched the expected opportunity classifications and
+    outreach timing flags in all 8 cases, with no inversions in
+    health-score ordering against the manual ranking. All generated
+    email drafts referenced at least two account-specific signals.
+    For comparison, a rules-based baseline correctly classified 5
+    of the 8 accounts. These results are directional findings from a
+    small, self-created dataset, not evidence of production accuracy.
+  </p>
+</div>
     </div>
     <div class="project-links">
      <a href="https://cx-spark-ai-growth-scout.lovable.app/" target="_blank" rel="noopener">VIEW LIVE PROTOTYPE ↗</a>
