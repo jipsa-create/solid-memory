@@ -296,32 +296,32 @@ footer{background:var(--navy);color:#bdc9d7;padding:30px 0;font-size:12px}
        <span class="tag">PRIOR AUTHORIZATION</span>
       </div>
       <h3>AuthFlow AI</h3>
-      <div class="project-subtitle">An AI co-pilot for outpatient MRI prior authorization</div>
+      <div class="project-subtitle">An AI workflow assistant for outpatient MRI prior authorization teams</div>
      </div>
     </div>
 
-    <p class="project-description">Prior authorization teams must translate payer-specific requirements into complete clinical evidence packets. Fragmented documentation and manual evidence gathering create rework, administrative burden, and scheduling delays.</p>
+    <p class="project-description">Imagine an MRI appointment is ready to be scheduled, but the authorization team first needs to establish whether the patient's documentation meets the payer's requirements. The relevant information may be spread across clinical notes, imaging reports, and policy documents. Staff must manually connect the pieces, identify missing evidence, and prepare a submission packet. AuthFlow is designed to take on that coordination work.</p>
 
     <div class="project-details">
      <div>
-      <h4>The product opportunity</h4>
-      <p>MRI authorization is a bounded, repeatable workflow with recognizable documentation patterns. It is a practical starting point for investigating policy requirements, mapping evidence, and identifying gaps before expanding to other procedures.</p>
+      <h4>What are we trying to solve?</h4>
+      <p>The challenge is not simply finding documents or summarizing them. Staff need to determine which clinical evidence supports each payer requirement, what is missing, and where the documentation is unclear. A generic chatbot can summarize records, but it still leaves staff to do the comparison and reconciliation themselves.</p>
      </div>
      <div class="decision">
-      <h4>Key product decisions</h4>
+      <h4>Why build it this way?</h4>
       <ul>
-       <li>Start with one procedure category instead of automating every authorization workflow.</li>
-       <li>Map clinical evidence to criteria with source visibility.</li>
-       <li>Escalate ambiguous or conflicting information rather than guessing.</li>
-       <li>Keep final review and submission decisions with authorized staff.</li>
+       <li>Retrieve the relevant payer criteria for a specific MRI authorization case.</li>
+       <li>Map clinical evidence to individual requirements instead of producing one broad summary.</li>
+       <li>Flag missing, conflicting, or unsupported evidence rather than filling gaps with assumptions.</li>
+       <li>Prepare a structured packet for staff review while keeping authorization decisions with qualified humans.</li>
       </ul>
      </div>
     </div>
 
     <div class="project-details">
      <div>
-      <h4>Agent workflow</h4>
-      <p>Case intake → payer policy retrieval → clinical document review → evidence-to-criteria mapping → missing/conflicting evidence detection → packet preparation → human review.</p>
+      <h4>How the workflow operates</h4>
+      <p>Rather than asking staff to search, compare, and reconcile everything manually, the workflow breaks authorization preparation into connected steps: retrieve the policy, review the documentation, map evidence to criteria, and identify exceptions. Each step produces information the next step can use, making the process easier to inspect, validate, and hand off.</p>
      </div>
      <div>
       <h4>What I would measure</h4>
@@ -334,42 +334,42 @@ footer{background:var(--navy);color:#bdc9d7;padding:30px 0;font-size:12px}
       <h4>Agent Evaluation</h4>
       <span class="eval-label">Evaluation framework</span>
      </div>
-     <p class="eval-intro">I designed a synthetic test framework to assess whether the agent can interpret clinical documentation against payer-specific MRI authorization requirements—and recognize when evidence is insufficient.</p>
+     <p class="eval-intro">A useful authorization assistant must do more than produce a plausible answer. I designed a synthetic test framework to assess whether it can interpret clinical documentation against payer-specific MRI requirements, show its supporting evidence, and recognize when it should stop and ask for human review.</p>
 
      <div class="eval-grid">
       <div class="eval-test">
        <span class="eval-index">01</span>
        <div>
         <strong>Evidence mapping</strong>
-        <p>Can the agent map clinical documents to the correct payer criteria?</p>
+        <p>Can the agent map clinical documents to the correct payer criteria and show its supporting sources?</p>
        </div>
       </div>
       <div class="eval-test">
        <span class="eval-index">02</span>
        <div>
         <strong>Missing evidence</strong>
-        <p>Does it identify required but absent documentation?</p>
+        <p>Does it identify required but absent documentation instead of assuming it exists?</p>
        </div>
       </div>
       <div class="eval-test">
        <span class="eval-index">03</span>
        <div>
         <strong>Conflicting evidence</strong>
-        <p>Does it recognize contradictions across clinical records?</p>
+        <p>Does it recognize contradictions across clinical records and surface them for review?</p>
        </div>
       </div>
       <div class="eval-test">
        <span class="eval-index">04</span>
        <div>
         <strong>Unsupported claims</strong>
-        <p>Does it avoid conclusions that are not supported by source documents?</p>
+        <p>Does it avoid conclusions that are not supported by the source documents?</p>
        </div>
       </div>
       <div class="eval-test">
        <span class="eval-index">05</span>
        <div>
         <strong>Human escalation</strong>
-        <p>Does it route ambiguous or conflicting cases for human review?</p>
+        <p>Does it route ambiguous or conflicting cases for human review rather than making an unsupported decision?</p>
        </div>
       </div>
      </div>
@@ -426,32 +426,32 @@ footer{background:var(--navy);color:#bdc9d7;padding:30px 0;font-size:12px}
        <span class="tag">REVENUE INTELLIGENCE</span>
       </div>
       <h3>Account Growth Agent</h3>
-      <div class="project-subtitle">An AI account intelligence and expansion co-pilot</div>
+      <div class="project-subtitle">An agentic account intelligence workflow for B2B customer teams</div>
      </div>
     </div>
 
-    <p class="project-description">Account managers have CRM notes, product usage, support history, and company news—but connecting those signals into timely commercial action is often manual. This prototype helps teams identify account health, expansion opportunities, and renewal risks.</p>
+    <p class="project-description">Imagine an account manager starting the week by reviewing a portfolio of customers. One account has rapidly increasing product usage. Another has raised several support issues. A third has announced a major expansion. Each signal could mean something different for the commercial relationship, but the context lives in different places. Account Growth Agent brings these signals together to help the account manager decide where to focus, what opportunity exists, and whether now is the right time to reach out.</p>
 
     <div class="project-details">
      <div>
-      <h4>The product opportunity</h4>
-      <p>Existing customer growth is important to recurring revenue, but high product usage does not always mean an account is ready for an upsell. Unresolved support issues or negative sentiment may make outreach poorly timed.</p>
+      <h4>What are we trying to solve?</h4>
+      <p>Account managers often piece together CRM notes, product usage, support history, and external company news manually. The hard part is not finding a growth signal; it is understanding what that signal means in context. High usage may indicate expansion potential, but unresolved support issues or negative account sentiment could make an upsell conversation poorly timed.</p>
      </div>
      <div class="decision">
-      <h4>Key product decisions</h4>
+      <h4>Why build it this way?</h4>
       <ul>
        <li>Combine internal account context with external company research.</li>
-       <li>Explain recommendations using account-specific signals.</li>
-       <li>Consider relationship health before recommending outreach.</li>
-       <li>Require account manager approval before sending communication.</li>
+       <li>Classify opportunities and explain the account-specific signals behind each recommendation.</li>
+       <li>Assess relationship health before recommending outreach.</li>
+       <li>Draft a relevant next step, but leave the decision to contact the customer with the account manager.</li>
       </ul>
      </div>
     </div>
 
     <div class="project-details">
      <div>
-      <h4>Agent workflow</h4>
-      <p>Company research → account data retrieval → health analysis → opportunity classification → recommended action → personalized email draft → human approval.</p>
+      <h4>How the workflow operates</h4>
+      <p>The agent does not jump directly from a data signal to an email. It researches the company, retrieves relevant account context, evaluates relationship health and opportunity, and then drafts a recommended action. Separating these steps makes the recommendation easier to explain and helps prevent a growth signal from overriding relationship risks.</p>
      </div>
      <div>
       <h4>What I would measure</h4>
